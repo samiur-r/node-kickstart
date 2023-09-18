@@ -10,7 +10,8 @@
     "format": "prettier --write 'src/**/*.{ts,tsx}'",
     "test:unit": "jest",
     "test:e2e:open": "cypress open",
-    "test:e2e:run": "cypress run"
+    "test:e2e:run": "cypress run",
+    "test:lighthouse": "bash scripts/lighthouse.sh"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
