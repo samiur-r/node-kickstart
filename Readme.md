@@ -1,4 +1,4 @@
-# Express TypeScript Starter Kit
+# Node Kickstart
 
 This project provides a robust starter kit for Express.js applications using TypeScript. It integrates best practices with tooling for linting, formatting, commit conventions, unit testing, and end-to-end testing.
 
