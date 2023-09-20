@@ -9,7 +9,7 @@
     "skipLibCheck": true,
     "baseUrl": "./",
     "paths": {
-      "@app/*": ["./src/*"]
+      "@/*": ["./src/*"]
     },
     "plugins": [
       /* Transform paths in output .js files */

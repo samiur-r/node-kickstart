@@ -3,8 +3,8 @@ import cors from 'cors';
 import helmet from 'helmet';
 import CookieParser from 'cookie-parser';
 
-import corsOptions from '@app/config/corsOptions';
-import config from './config';
+import corsOptions from '@/config/corsOptions';
+import config from '@/config';
 
 const app: Express = express();
 
