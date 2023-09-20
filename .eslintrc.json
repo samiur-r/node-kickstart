@@ -5,7 +5,15 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended"
   ],
+  "settings": {
+    "import/resolver": {
+      "typescript": {} // This tells ESLint to use the typescript-import-resolver
+    }
+  },
   "rules": {
-    "import/no-extraneous-dependencies": "off"
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
+    "no-restricted-exports": "off",
+    "import/extensions": "off"
   }
 }
