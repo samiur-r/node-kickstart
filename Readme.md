@@ -1,6 +1,6 @@
 # Node Kickstart
 
-This project provides a robust starter kit for Express.js applications using TypeScript. It integrates best practices with tooling for linting, formatting, commit conventions, unit testing, and end-to-end testing.
+Kickstart your Node.js project with a robust, clean architecture and all the essential tools you need! This starter kit is designed to help you create scalable, maintainable, and production-ready applications in no time.
 
 ## Features
 
