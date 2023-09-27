@@ -8,7 +8,11 @@ import config from '@/config';
 import morganMiddleware from '@/middlewares/MorganMiddleware';
 import errorHandlingMiddleware from '@/middlewares/ErrorHandlingMiddleware';
 
+import todosRoutes from '@/api/v1/todos';
+
 const app: Express = express();
+
+app.use('/api/v1/todos', todosRoutes);
 
 app.use(CookieParser(config.cookieSecret));
 app.use(express.json({ limit: '50mb' }));
