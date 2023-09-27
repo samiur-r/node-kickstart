@@ -35,7 +35,7 @@ describe('Todo API', () => {
   });
 
   it('should delete a todo by ID', () => {
-    cy.request('DELETE', '/api/v1/todos/2').then((response) => {
+    cy.request('DELETE', '/api/v1/todos/3').then((response) => {
       expect(response.status).to.equal(204);
     });
   });
