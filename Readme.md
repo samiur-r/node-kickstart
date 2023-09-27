@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Node.js Version](https://img.shields.io/badge/node.js-%3E%3D%2012.0.0-brightgreen.svg)](https://nodejs.org/)
-[![TypeScript](https://badges.frapsoft.com/typescript/awesome/typescript.svg?v=103)](https://www.typescriptlang.org/)
+[![TypeScript](https://img.shields.io/badge/Typescript-%5E0.32.9-blueviolet)](https://www.typescriptlang.org/)
 [![PRISMA](https://img.shields.io/badge/PRISMA-%5E2.25.0-blue)](https://www.prisma.io/)
 [![Express.js](https://img.shields.io/badge/Express.js-%5E4.17.1-green)](https://expressjs.com/)
 [![Jest](https://img.shields.io/badge/Jest-%5E27.0.4-orange)](https://jestjs.io/)
@@ -27,7 +27,7 @@ Kickstart your Node.js project with a robust, clean architecture and all the ess
 - :white_check_mark: **Jest**: Delightful JavaScript Testing for Node.js projects. [Jest](https://jestjs.io/)
 - :eyes: **Cypress**: Fast, easy, and reliable end-to-end testing for anything that runs in a browser. [Cypress](https://www.cypress.io/)
 - :package: **Yup**: Schema validation for API input data. [Yup](https://github.com/jquense/yup)
-- :helmet_with_cross: **Helmet**: Helps secure your Express applications by setting various HTTP headers. [Helmet](https://helmetjs.github.io/)
+- :taurus: **Helmet**: Helps secure your Express applications by setting various HTTP headers. [Helmet](https://helmetjs.github.io/)
 - :loud_sound: **Morgan**: HTTP request logger middleware for Node.js. [Morgan](https://github.com/expressjs/morgan)
 - :building_construction: **Clean Architecture**: A well-structured project layout for maintainability.
 - :interrobang: **Error Handling**: Robust error handling to improve reliability.
@@ -58,13 +58,27 @@ cd node-kickstart
 yarn install
 ```
 
-3. Start the development server:
+3. Copy the env.example file to .env::
+
+```bash
+ cp .env.example .env
+```
+
+4. Start the development server:
 
 ```bash
 yarn run start
 ```
 
-3. Start the development server:
+### Build
+
+Builds the production application
+
+```bash
+yarn run build
+```
+
+Starts the application in production mode.
 
 ```bash
 yarn run start
