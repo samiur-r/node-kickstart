@@ -1,18 +1,18 @@
 # Node Kickstart
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Node.js Version](https://img.shields.io/badge/node.js-%3E%3D%2012.0.0-brightgreen.svg)](https://nodejs.org/)
-[![TypeScript](https://img.shields.io/badge/Typescript-%5E0.32.9-blueviolet)](https://www.typescriptlang.org/)
-[![PRISMA](https://img.shields.io/badge/PRISMA-%5E2.25.0-blue)](https://www.prisma.io/)
-[![Express.js](https://img.shields.io/badge/Express.js-%5E4.17.1-green)](https://expressjs.com/)
-[![Jest](https://img.shields.io/badge/Jest-%5E27.0.4-orange)](https://jestjs.io/)
-[![Cypress](https://img.shields.io/badge/Cypress-%5E8.0.0-yellow)](https://www.cypress.io/)
-[![ESLint](https://img.shields.io/badge/ESLint-%5E7.32.0-red)](https://eslint.org/)
-[![Prettier](https://img.shields.io/badge/Prettier-%5E2.4.0-purple)](https://prettier.io/)
-[![Husky](https://img.shields.io/badge/Husky-%5E7.0.1-blueviolet)](https://typicode.github.io/husky/#/)
-[![Helmet](https://img.shields.io/badge/Helmet-%5E4.6.0-brightgreen)](https://helmetjs.github.io/)
-[![Morgan](https://img.shields.io/badge/Morgan-%5E1.11.0-yellowgreen)](https://github.com/expressjs/morgan)
-[![Yup](https://img.shields.io/badge/Yup-%5E0.32.9-lightgrey)](https://github.com/jquense/yup)
+[![Node.js Version](https://img.shields.io/badge/node.js-%3E%3D%2018.0.0-brightgreen.svg)](https://nodejs.org/)
+[![TypeScript](https://img.shields.io/badge/Typescript-%5E5.2.2-blueviolet)](https://www.typescriptlang.org/)
+[![PRISMA](https://img.shields.io/badge/PRISMA-%5E5.5.1-blue)](https://www.prisma.io/)
+[![Express.js](https://img.shields.io/badge/Express.js-%5E4.18.2-green)](https://expressjs.com/)
+[![Jest](https://img.shields.io/badge/Jest-%5E29.7.0-orange)](https://jestjs.io/)
+[![Cypress](https://img.shields.io/badge/Cypress-%5E13.2.0-yellow)](https://www.cypress.io/)
+[![ESLint](https://img.shields.io/badge/ESLint-%5E8.49.0-red)](https://eslint.org/)
+[![Prettier](https://img.shields.io/badge/Prettier-%5E3.0.3-purple)](https://prettier.io/)
+[![Husky](https://img.shields.io/badge/Husky-%5E8.0.3-blueviolet)](https://typicode.github.io/husky/#/)
+[![Helmet](https://img.shields.io/badge/Helmet-%5E7.0.0-brightgreen)](https://helmetjs.github.io/)
+[![Morgan](https://img.shields.io/badge/Morgan-%5E1.10.0-yellowgreen)](https://github.com/expressjs/morgan)
+[![Yup](https://img.shields.io/badge/Yup-%5E1.2.0-lightgrey)](https://github.com/jquense/yup)
 
 Kickstart your Node.js project with a robust, clean architecture and all the essential tools you need! This starter kit is designed to help you create scalable, maintainable, and production-ready applications in no time.
 
