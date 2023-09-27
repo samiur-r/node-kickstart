@@ -1,6 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 
 import logger from '@/utils/logger';
+import ErrorHandler from '@/utils/ErrorHandler';
 import {
   createTodoService,
   getAllTodosService,
@@ -11,10 +12,9 @@ import {
 import { todoSchema } from './validation';
 
 const createTodo = async (req: Request, res: Response, next: NextFunction) => {
-  const { title, completed } = req.body;
-
   try {
-    await todoSchema.validate(title, completed);
+    const { title, completed } = req.body;
+    await todoSchema.validate({ title, completed });
 
     const newTodo = await createTodoService(title, completed);
     return res.status(201).json(newTodo);
@@ -39,9 +39,9 @@ const getAllTodos = async (
 };
 
 const getTodoById = async (req: Request, res: Response, next: NextFunction) => {
-  const id = parseInt(req.params.id, 10);
-
   try {
+    const id = parseInt(req.params.id, 10);
+
     const todo = await getTodoByIdService(id);
     return res.status(200).json(todo);
   } catch (error: any) {
@@ -51,11 +51,14 @@ const getTodoById = async (req: Request, res: Response, next: NextFunction) => {
 };
 
 const updateTodo = async (req: Request, res: Response, next: NextFunction) => {
-  const id = parseInt(req.params.id, 10);
-  const { title, completed } = req.body;
-
   try {
-    await todoSchema.validate(title, completed);
+    const id = parseInt(req.params.id, 10);
+    const { title, completed } = req.body;
+
+    await todoSchema.validate({ title, completed });
+
+    const todo = await getTodoByIdService(id);
+    if (!todo) throw new ErrorHandler(404, `Todo with the id ${id} not found`);
 
     const updatedTodo = await updateTodoService(id, title, completed);
     return res.status(200).json(updatedTodo);
@@ -66,9 +69,12 @@ const updateTodo = async (req: Request, res: Response, next: NextFunction) => {
 };
 
 const deleteTodo = async (req: Request, res: Response, next: NextFunction) => {
-  const id = parseInt(req.params.id, 10);
-
   try {
+    const id = parseInt(req.params.id, 10);
+
+    const todo = await getTodoByIdService(id);
+    if (!todo) throw new ErrorHandler(404, `Todo with the id ${id} not found`);
+
     await deleteTodoService(id);
     return res.status(204).json({ message: 'Todo deleted successfully' });
   } catch (error: any) {
