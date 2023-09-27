@@ -8,10 +8,14 @@ import {
   updateTodoService,
   deleteTodoService,
 } from './service';
+import { todoSchema } from './validation';
 
 const createTodo = async (req: Request, res: Response, next: NextFunction) => {
+  const { title, completed } = req.body;
+
   try {
-    const { title, completed } = req.body;
+    await todoSchema.validate(title, completed);
+
     const newTodo = await createTodoService(title, completed);
     return res.status(201).json(newTodo);
   } catch (error: any) {
@@ -36,6 +40,7 @@ const getAllTodos = async (
 
 const getTodoById = async (req: Request, res: Response, next: NextFunction) => {
   const id = parseInt(req.params.id, 10);
+
   try {
     const todo = await getTodoByIdService(id);
     return res.status(200).json(todo);
@@ -48,7 +53,10 @@ const getTodoById = async (req: Request, res: Response, next: NextFunction) => {
 const updateTodo = async (req: Request, res: Response, next: NextFunction) => {
   const id = parseInt(req.params.id, 10);
   const { title, completed } = req.body;
+
   try {
+    await todoSchema.validate(title, completed);
+
     const updatedTodo = await updateTodoService(id, title, completed);
     return res.status(200).json(updatedTodo);
   } catch (error: any) {
@@ -59,6 +67,7 @@ const updateTodo = async (req: Request, res: Response, next: NextFunction) => {
 
 const deleteTodo = async (req: Request, res: Response, next: NextFunction) => {
   const id = parseInt(req.params.id, 10);
+
   try {
     await deleteTodoService(id);
     return res.status(204).json({ message: 'Todo deleted successfully' });
