@@ -43,6 +43,9 @@ const getTodoById = async (req: Request, res: Response, next: NextFunction) => {
     const id = parseInt(req.params.id, 10);
 
     const todo = await getTodoByIdService(id);
+
+    if (!todo) throw new ErrorHandler(404, `Todo with the id ${id} not found`);
+
     return res.status(200).json(todo);
   } catch (error: any) {
     logger.error(`${error.name}: ${error.message}`);
