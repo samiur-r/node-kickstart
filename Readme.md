@@ -67,7 +67,7 @@ yarn install
 4. Start the development server:
 
 ```bash
-yarn run start
+yarn run dev
 ```
 
 ### Build
